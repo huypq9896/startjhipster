@@ -1,0 +1,121 @@
+<div>
+    <h2 data-translate="appsmysqlApp.hscn.home.title">Hscns</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="hscn.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="appsmysqlApp.hscn.home.createLabel">
+                        Create new Hscn
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'appsmysqlApp.hscn.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="soBhxh"><span data-translate="appsmysqlApp.hscn.soBhxh">So Bhxh</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="hoTen"><span data-translate="appsmysqlApp.hscn.hoTen">Ho Ten</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gioiTinh"><span data-translate="appsmysqlApp.hscn.gioiTinh">Gioi Tinh</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ngaySinh"><span data-translate="appsmysqlApp.hscn.ngaySinh">Ngay Sinh</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="soCmnd"><span data-translate="appsmysqlApp.hscn.soCmnd">So Cmnd</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="diaChiLh"><span data-translate="appsmysqlApp.hscn.diaChiLh">Dia Chi Lh</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ngayCap"><span data-translate="appsmysqlApp.hscn.ngayCap">Ngay Cap</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="noiCap"><span data-translate="appsmysqlApp.hscn.noiCap">Noi Cap</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dan_toc"><span data-translate="appsmysqlApp.hscn.dan_toc">Dan Toc</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="quoc_tich"><span data-translate="appsmysqlApp.hscn.quoc_tich">Quoc Tich</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="noi_khai"><span data-translate="appsmysqlApp.hscn.noi_khai">Noi Khai</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="diachiHK"><span data-translate="appsmysqlApp.hscn.diachiHK">Diachi HK</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dien_thoai"><span data-translate="appsmysqlApp.hscn.dien_thoai">Dien Thoai</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span data-translate="appsmysqlApp.hscn.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="chuc_vu"><span data-translate="appsmysqlApp.hscn.chuc_vu">Chuc Vu</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maPB"><span data-translate="appsmysqlApp.hscn.maPB">Ma PB</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phong_ban"><span data-translate="appsmysqlApp.hscn.phong_ban">Phong Ban</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maCV"><span data-translate="appsmysqlApp.hscn.maCV">Ma CV</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maNV"><span data-translate="appsmysqlApp.hscn.maNV">Ma NV</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="noicapBHXH"><span data-translate="appsmysqlApp.hscn.noicapBHXH">Noicap BHXH</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maDT"><span data-translate="appsmysqlApp.hscn.maDT">Ma DT</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maBV"><span data-translate="appsmysqlApp.hscn.maBV">Ma BV</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ghi_chu"><span data-translate="appsmysqlApp.hscn.ghi_chu">Ghi Chu</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="hscn in vm.hscns track by hscn.id">
+                    <td><a ui-sref="hscn-detail({id:hscn.id})">{{hscn.id}}</a></td>
+                    <td>{{hscn.soBhxh}}</td>
+                    <td>{{hscn.hoTen}}</td>
+                    <td>{{hscn.gioiTinh}}</td>
+                    <td>{{hscn.ngaySinh}}</td>
+                    <td>{{hscn.soCmnd}}</td>
+                    <td>{{hscn.diaChiLh}}</td>
+                    <td>{{hscn.ngayCap}}</td>
+                    <td>{{hscn.noiCap}}</td>
+                    <td>{{hscn.dan_toc}}</td>
+                    <td>{{hscn.quoc_tich}}</td>
+                    <td>{{hscn.noi_khai}}</td>
+                    <td>{{hscn.diachiHK}}</td>
+                    <td>{{hscn.dien_thoai}}</td>
+                    <td>{{hscn.email}}</td>
+                    <td>{{hscn.chuc_vu}}</td>
+                    <td>{{hscn.maPB}}</td>
+                    <td>{{hscn.phong_ban}}</td>
+                    <td>{{hscn.maCV}}</td>
+                    <td>{{hscn.maNV}}</td>
+                    <td>{{hscn.noicapBHXH}}</td>
+                    <td>{{hscn.maDT}}</td>
+                    <td>{{hscn.maBV}}</td>
+                    <td>{{hscn.ghi_chu}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="hscn-detail({id:hscn.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hscn.edit({id:hscn.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hscn.delete({id:hscn.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

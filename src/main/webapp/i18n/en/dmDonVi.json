@@ -1,0 +1,25 @@
+{
+    "appsmysqlApp": {
+        "dmDonVi" : {
+            "home": {
+                "title": "Dm Don Vis",
+                "createLabel": "Create a new Dm Don Vi",
+                "createOrEditLabel": "Create or edit a Dm Don Vi",
+                "search": "Search for Dm Don Vi"
+            },
+            "created": "A new Dm Don Vi is created with identifier {{ param }}",
+            "updated": "A Dm Don Vi is updated with identifier {{ param }}",
+            "deleted": "A Dm Don Vi is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Dm Don Vi {{ id }}?"
+            },
+            "detail": {
+                "title": "Dm Don Vi"
+            },
+            "ma": "Ma",
+            "name": "Name",
+            "diaChi": "Dia Chi",
+            "ghiChu": "Ghi Chu"
+        }
+    }
+}

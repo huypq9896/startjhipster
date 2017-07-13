@@ -1,0 +1,111 @@
+
+<div>
+    <h2><span data-translate="appsmysqlApp.hscn.detail.title">Hscn</span> {{vm.hscn.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appsmysqlApp.hscn.soBhxh">So Bhxh</span></dt>
+        <dd>
+            <span>{{vm.hscn.soBhxh}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.hoTen">Ho Ten</span></dt>
+        <dd>
+            <span>{{vm.hscn.hoTen}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.gioiTinh">Gioi Tinh</span></dt>
+        <dd>
+            <span>{{vm.hscn.gioiTinh}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.ngaySinh">Ngay Sinh</span></dt>
+        <dd>
+            <span>{{vm.hscn.ngaySinh}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.soCmnd">So Cmnd</span></dt>
+        <dd>
+            <span>{{vm.hscn.soCmnd}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.diaChiLh">Dia Chi Lh</span></dt>
+        <dd>
+            <span>{{vm.hscn.diaChiLh}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.ngayCap">Ngay Cap</span></dt>
+        <dd>
+            <span>{{vm.hscn.ngayCap}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.noiCap">Noi Cap</span></dt>
+        <dd>
+            <span>{{vm.hscn.noiCap}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.dan_toc">Dan Toc</span></dt>
+        <dd>
+            <span>{{vm.hscn.dan_toc}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.quoc_tich">Quoc Tich</span></dt>
+        <dd>
+            <span>{{vm.hscn.quoc_tich}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.noi_khai">Noi Khai</span></dt>
+        <dd>
+            <span>{{vm.hscn.noi_khai}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.diachiHK">Diachi HK</span></dt>
+        <dd>
+            <span>{{vm.hscn.diachiHK}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.dien_thoai">Dien Thoai</span></dt>
+        <dd>
+            <span>{{vm.hscn.dien_thoai}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.email">Email</span></dt>
+        <dd>
+            <span>{{vm.hscn.email}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.chuc_vu">Chuc Vu</span></dt>
+        <dd>
+            <span>{{vm.hscn.chuc_vu}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.maPB">Ma PB</span></dt>
+        <dd>
+            <span>{{vm.hscn.maPB}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.phong_ban">Phong Ban</span></dt>
+        <dd>
+            <span>{{vm.hscn.phong_ban}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.maCV">Ma CV</span></dt>
+        <dd>
+            <span>{{vm.hscn.maCV}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.maNV">Ma NV</span></dt>
+        <dd>
+            <span>{{vm.hscn.maNV}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.noicapBHXH">Noicap BHXH</span></dt>
+        <dd>
+            <span>{{vm.hscn.noicapBHXH}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.maDT">Ma DT</span></dt>
+        <dd>
+            <span>{{vm.hscn.maDT}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.maBV">Ma BV</span></dt>
+        <dd>
+            <span>{{vm.hscn.maBV}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.hscn.ghi_chu">Ghi Chu</span></dt>
+        <dd>
+            <span>{{vm.hscn.ghi_chu}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="hscn-detail.edit({id:vm.hscn.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

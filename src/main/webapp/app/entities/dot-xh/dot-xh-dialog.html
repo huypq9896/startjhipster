@@ -1,0 +1,254 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDotXhLabel" data-translate="appsmysqlApp.dotXh.home.createOrEditLabel">Create or edit a Dot Xh</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.dotXh.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.dotXh.id" readonly />
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.maDv" for="field_maDv">Ma Dv</label>
+            <input type="text" class="form-control" name="maDv" id="field_maDv"
+                    ng-model="vm.dotXh.maDv"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.maQt" for="field_maQt">Ma Qt</label>
+            <input type="text" class="form-control" name="maQt" id="field_maQt"
+                    ng-model="vm.dotXh.maQt"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.loaiDt" for="field_loaiDt">Loai Dt</label>
+            <input type="text" class="form-control" name="loaiDt" id="field_loaiDt"
+                    ng-model="vm.dotXh.loaiDt"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.maNt" for="field_maNt">Ma Nt</label>
+            <input type="text" class="form-control" name="maNt" id="field_maNt"
+                    ng-model="vm.dotXh.maNt"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.tyGia" for="field_tyGia">Ty Gia</label>
+            <input type="number" class="form-control" name="tyGia" id="field_tyGia"
+                    ng-model="vm.dotXh.tyGia"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.ngayCt" for="field_ngayCt">Ngay Ct</label>
+                <div class="input-group">
+                    <input id="field_ngayCt" type="text" class="form-control" name="ngayCt" datetime-picker="{{dateformat}}" ng-model="vm.dotXh.ngayCt" is-open="vm.datePickerOpenStatus.ngayCt"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngayCt')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.soPhieu" for="field_soPhieu">So Phieu</label>
+            <input type="text" class="form-control" name="soPhieu" id="field_soPhieu"
+                    ng-model="vm.dotXh.soPhieu"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.soLd" for="field_soLd">So Ld</label>
+            <input type="number" class="form-control" name="soLd" id="field_soLd"
+                    ng-model="vm.dotXh.soLd"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.tql" for="field_tql">Tql</label>
+            <input type="number" class="form-control" name="tql" id="field_tql"
+                    ng-model="vm.dotXh.tql"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.userCode" for="field_userCode">User Code</label>
+            <input type="text" class="form-control" name="userCode" id="field_userCode"
+                    ng-model="vm.dotXh.userCode"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.lastCode" for="field_lastCode">Last Code</label>
+                <div class="input-group">
+                    <input id="field_lastCode" type="text" class="form-control" name="lastCode" datetime-picker="{{dateformat}}" ng-model="vm.dotXh.lastCode" is-open="vm.datePickerOpenStatus.lastCode"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastCode')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.sldNu" for="field_sldNu">Sld Nu</label>
+            <input type="number" class="form-control" name="sldNu" id="field_sldNu"
+                    ng-model="vm.dotXh.sldNu"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.maQl" for="field_maQl">Ma Ql</label>
+            <input type="text" class="form-control" name="maQl" id="field_maQl"
+                    ng-model="vm.dotXh.maQl"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.maTinh" for="field_maTinh">Ma Tinh</label>
+            <input type="text" class="form-control" name="maTinh" id="field_maTinh"
+                    ng-model="vm.dotXh.maTinh"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.listNgaynghi" for="field_listNgaynghi">List Ngaynghi</label>
+            <input type="text" class="form-control" name="listNgaynghi" id="field_listNgaynghi"
+                    ng-model="vm.dotXh.listNgaynghi"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.khoaSo" for="field_khoaSo">Khoa So</label>
+                <input type="checkbox" name="khoaSo" id="field_khoaSo"
+                          ng-model="vm.dotXh.khoaSo"/>
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.ngayKhoa" for="field_ngayKhoa">Ngay Khoa</label>
+                <div class="input-group">
+                    <input id="field_ngayKhoa" type="text" class="form-control" name="ngayKhoa" datetime-picker="{{dateformat}}" ng-model="vm.dotXh.ngayKhoa" is-open="vm.datePickerOpenStatus.ngayKhoa"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngayKhoa')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.thongTin1" for="field_thongTin1">Thong Tin 1</label>
+            <input type="text" class="form-control" name="thongTin1" id="field_thongTin1"
+                    ng-model="vm.dotXh.thongTin1"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.thongTin2" for="field_thongTin2">Thong Tin 2</label>
+            <input type="text" class="form-control" name="thongTin2" id="field_thongTin2"
+                    ng-model="vm.dotXh.thongTin2"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.thongTin3" for="field_thongTin3">Thong Tin 3</label>
+            <input type="text" class="form-control" name="thongTin3" id="field_thongTin3"
+                    ng-model="vm.dotXh.thongTin3"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-4">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.ngay1" for="field_ngay1">Ngay 1</label>
+                <div class="input-group">
+                    <input id="field_ngay1" type="text" class="form-control" name="ngay1" datetime-picker="{{dateformat}}" ng-model="vm.dotXh.ngay1" is-open="vm.datePickerOpenStatus.ngay1"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngay1')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group col-xs-4">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.ngay2" for="field_ngay2">Ngay 2</label>
+                <div class="input-group">
+                    <input id="field_ngay2" type="text" class="form-control" name="ngay2" datetime-picker="{{dateformat}}" ng-model="vm.dotXh.ngay2" is-open="vm.datePickerOpenStatus.ngay2"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngay2')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group col-xs-4">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.ngay3" for="field_ngay3">Ngay 3</label>
+                <div class="input-group">
+                    <input id="field_ngay3" type="text" class="form-control" name="ngay3" datetime-picker="{{dateformat}}" ng-model="vm.dotXh.ngay3" is-open="vm.datePickerOpenStatus.ngay3"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngay3')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        </div>
+       
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.ghiChu" for="field_ghiChu">Ghi Chu</label>
+            <input type="text" class="form-control" name="ghiChu" id="field_ghiChu"
+                    ng-model="vm.dotXh.ghiChu"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.ngayDuyet" for="field_ngayDuyet">Ngay Duyet</label>
+                <div class="input-group">
+                    <input id="field_ngayDuyet" type="text" class="form-control" name="ngayDuyet" datetime-picker="{{dateformat}}" ng-model="vm.dotXh.ngayDuyet" is-open="vm.datePickerOpenStatus.ngayDuyet"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngayDuyet')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.nguoiDuyet" for="field_nguoiDuyet">Nguoi Duyet</label>
+            <input type="text" class="form-control" name="nguoiDuyet" id="field_nguoiDuyet"
+                    ng-model="vm.dotXh.nguoiDuyet"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.dotXh.keySl" for="field_keySl">Key Sl</label>
+            <input type="text" class="form-control" name="keySl" id="field_keySl"
+                    ng-model="vm.dotXh.keySl"
+                    />
+        </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

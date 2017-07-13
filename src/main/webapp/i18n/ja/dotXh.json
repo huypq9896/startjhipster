@@ -1,0 +1,48 @@
+{
+    "appsmysqlApp": {
+        "dotXh" : {
+            "home": {
+                "title": "DotXhs",
+                "createLabel": "Dot Xh を追加",
+                "createOrEditLabel": "Dot Xhを追加または編集",
+                "search": "Search for Dot Xh"
+            },
+            "created": "A new Dot Xh is created with identifier {{ param }}",
+            "updated": "A Dot Xh is updated with identifier {{ param }}",
+            "deleted": "A Dot Xh is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Dot Xh {{ id }}を削除してもよろしいですか？"
+            },
+            "detail": {
+                "title": "Dot Xh"
+            },
+            "maDv": "Ma Dv",
+            "maQt": "Ma Qt",
+            "loaiDt": "Loai Dt",
+            "maNt": "Ma Nt",
+            "tyGia": "Ty Gia",
+            "ngayCt": "Ngay Ct",
+            "soPhieu": "So Phieu",
+            "soLd": "So Ld",
+            "tql": "Tql",
+            "userCode": "User Code",
+            "lastCode": "Last Code",
+            "sldNu": "Sld Nu",
+            "maQl": "Ma Ql",
+            "maTinh": "Ma Tinh",
+            "listNgaynghi": "List Ngaynghi",
+            "khoaSo": "Khoa So",
+            "ngayKhoa": "Ngay Khoa",
+            "thongTin1": "Thong Tin 1",
+            "thongTin2": "Thong Tin 2",
+            "thongTin3": "Thong Tin 3",
+            "ngay1": "Ngay 1",
+            "ngay2": "Ngay 2",
+            "ngay3": "Ngay 3",
+            "ghiChu": "Ghi Chu",
+            "ngayDuyet": "Ngay Duyet",
+            "nguoiDuyet": "Nguoi Duyet",
+            "keySl": "Key Sl"
+        }
+    }
+}

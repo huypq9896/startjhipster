@@ -1,0 +1,13 @@
+version: '2'
+services:
+    appsmysql-mysql:
+        image: mysql:5.7.18
+        # volumes:
+        #     - ~/volumes/jhipster/appsmysql/mysql/:/var/lib/mysql/
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=appsmysql
+        ports:
+            - 3306:3306
+        command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8 --explicit_defaults_for_timestamp

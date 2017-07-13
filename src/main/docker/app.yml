@@ -1,0 +1,19 @@
+version: '2'
+services:
+    appsmysql-app:
+        image: appsmysql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://appsmysql-mysql:3306/appsmysql?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=appsmysql-elasticsearch:9300
+        ports:
+            - 8080:8080
+    appsmysql-mysql:
+        extends:
+            file: mysql.yml
+            service: appsmysql-mysql
+    appsmysql-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: appsmysql-elasticsearch

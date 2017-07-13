@@ -1,0 +1,106 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "soBhxh",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "hoTen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gioiTinh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngaySinh",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "soCmnd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diaChiLh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngayCap",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "noiCap",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dan_toc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "quoc_tich",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noi_khai",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diachiHK",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dien_thoai",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chuc_vu",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maPB",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phong_ban",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maCV",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maNV",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noicapBHXH",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maDT",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maBV",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ghi_chu",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170625173326",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "hscn",
+    "pagination": "pagination"
+}

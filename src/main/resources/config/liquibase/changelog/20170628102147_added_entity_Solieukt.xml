@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Solieukt.
+    -->
+    <changeSet id="20170628102147-1" author="jhipster">
+        <createTable tableName="solieukt">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="ngay_xd" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_dv" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ten_dv" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="loai_huong" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_nguoi" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_nguoi_tt" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_nguoi_tn" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_ngay" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_tien" type="decimal(10,2)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dot" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="khoa_so" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="mansd" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ngay_dc" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="user_code_dc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_ql" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="keysl" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_phieu" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="stt" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_quan" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="solieukt" columnName="ngay_xd" columnDataType="datetime"/>
+        <dropDefaultValue tableName="solieukt" columnName="ngay_dc" columnDataType="datetime"/>
+        
+    </changeSet>
+</databaseChangeLog>

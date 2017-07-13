@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity CtHuong.
+    -->
+    <changeSet id="20170628094939-1" author="jhipster">
+        <createTable tableName="ct_huong">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="keysl" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="key_yp" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_dv" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_bhxh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_nv" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ho_ten" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="muc_luong" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ngay_duyet" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nguoi_duyet" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="loai_dt" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_nt" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ml_tt" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_cd" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_nh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tu_ngay" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="den_ngay" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tu_ngay_h" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="den_ngay_h" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_ngay" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_ngay_h" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_ngay_lk" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_tien" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_tien_h" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_nam_bh" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_thang_bh" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_ngay_lkdv" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ghi_chu" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_1" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_2" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_5" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_6" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tuoi_con" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="stt_con" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="gioi_tinh" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_qt" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_benh_dai" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_phauthuat" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_nghionha" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_suygiamld" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_xacsyt" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_3_ca" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ngay_1" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ten_con" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="stt" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_ql" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ma_tinh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="loaidc" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lydodc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ghichudc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="loai_benh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tuyen_bv" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lbqhs" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="lbqml" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tro_cap" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tro_cap_bh" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_3" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dk_4" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tyleh" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ngay_nuoi" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="so_ngay_cd" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ngay_nghi_list" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="vssid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tu_ngay_bs" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="den_ngay_bs" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="chk_1" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="chk_2" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="chk_3" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="ct_huong" columnName="ngay_duyet" columnDataType="datetime"/>
+        <dropDefaultValue tableName="ct_huong" columnName="tu_ngay" columnDataType="datetime"/>
+        <dropDefaultValue tableName="ct_huong" columnName="den_ngay" columnDataType="datetime"/>
+        <dropDefaultValue tableName="ct_huong" columnName="tu_ngay_h" columnDataType="datetime"/>
+        <dropDefaultValue tableName="ct_huong" columnName="den_ngay_h" columnDataType="datetime"/>
+        <dropDefaultValue tableName="ct_huong" columnName="ngay_1" columnDataType="datetime"/>
+        <dropDefaultValue tableName="ct_huong" columnName="ngay_nuoi" columnDataType="datetime"/>
+        <dropDefaultValue tableName="ct_huong" columnName="tu_ngay_bs" columnDataType="datetime"/>
+        <dropDefaultValue tableName="ct_huong" columnName="den_ngay_bs" columnDataType="datetime"/>
+        
+    </changeSet>
+</databaseChangeLog>

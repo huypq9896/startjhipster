@@ -1,0 +1,23 @@
+{
+    "appsmysqlApp": {
+        "luong" : {
+            "home": {
+                "title": "Luongs",
+                "createLabel": "Create a new Luong",
+                "createOrEditLabel": "Create or edit a Luong",
+                "search": "Search for Luong"
+            },
+            "created": "A new Luong is created with identifier {{ param }}",
+            "updated": "A Luong is updated with identifier {{ param }}",
+            "deleted": "A Luong is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Luong {{ id }}?"
+            },
+            "detail": {
+                "title": "Luong"
+            },
+            "mucLuong": "Muc Luong",
+            "thang": "Thang"
+        }
+    }
+}

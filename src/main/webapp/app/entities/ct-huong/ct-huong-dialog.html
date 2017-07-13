@@ -1,0 +1,562 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCtHuongLabel" data-translate="appsmysqlApp.ctHuong.home.createOrEditLabel">Create or edit a Ct Huong</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.ctHuong.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.ctHuong.id" readonly />
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.keysl" for="field_keysl">Keysl</label>
+            <input type="text" class="form-control" name="keysl" id="field_keysl"
+                    ng-model="vm.ctHuong.keysl"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.keyYp" for="field_keyYp">Key Yp</label>
+            <input type="text" class="form-control" name="keyYp" id="field_keyYp"
+                    ng-model="vm.ctHuong.keyYp"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.maDv" for="field_maDv">Ma Dv</label>
+            <input type="text" class="form-control" name="maDv" id="field_maDv"
+                    ng-model="vm.ctHuong.maDv"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soBhxh" for="field_soBhxh">So Bhxh</label>
+            <input type="text" class="form-control" name="soBhxh" id="field_soBhxh"
+                    ng-model="vm.ctHuong.soBhxh"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.maNv" for="field_maNv">Ma Nv</label>
+            <input type="text" class="form-control" name="maNv" id="field_maNv"
+                    ng-model="vm.ctHuong.maNv"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.hoTen" for="field_hoTen">Ho Ten</label>
+            <input type="text" class="form-control" name="hoTen" id="field_hoTen"
+                    ng-model="vm.ctHuong.hoTen"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.mucLuong" for="field_mucLuong">Muc Luong</label>
+            <input type="number" class="form-control" name="mucLuong" id="field_mucLuong"
+                    ng-model="vm.ctHuong.mucLuong"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.ngayDuyet" for="field_ngayDuyet">Ngay Duyet</label>
+                <div class="input-group">
+                    <input id="field_ngayDuyet" type="text" class="form-control" name="ngayDuyet" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.ngayDuyet" is-open="vm.datePickerOpenStatus.ngayDuyet"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngayDuyet')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.nguoiDuyet" for="field_nguoiDuyet">Nguoi Duyet</label>
+            <input type="text" class="form-control" name="nguoiDuyet" id="field_nguoiDuyet"
+                    ng-model="vm.ctHuong.nguoiDuyet"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.loaiDt" for="field_loaiDt">Loai Dt</label>
+            <input type="text" class="form-control" name="loaiDt" id="field_loaiDt"
+                    ng-model="vm.ctHuong.loaiDt"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'> 
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.maNt" for="field_maNt">Ma Nt</label>
+            <input type="text" class="form-control" name="maNt" id="field_maNt"
+                    ng-model="vm.ctHuong.maNt"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.mlTt" for="field_mlTt">Ml Tt</label>
+            <input type="number" class="form-control" name="mlTt" id="field_mlTt"
+                    ng-model="vm.ctHuong.mlTt"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.maCd" for="field_maCd">Ma Cd</label>
+            <input type="text" class="form-control" name="maCd" id="field_maCd"
+                    ng-model="vm.ctHuong.maCd"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.maNh" for="field_maNh">Ma Nh</label>
+            <input type="text" class="form-control" name="maNh" id="field_maNh"
+                    ng-model="vm.ctHuong.maNh"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.tuNgay" for="field_tuNgay">Tu Ngay</label>
+                <div class="input-group">
+                    <input id="field_tuNgay" type="text" class="form-control" name="tuNgay" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.tuNgay" is-open="vm.datePickerOpenStatus.tuNgay"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('tuNgay')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.denNgay" for="field_denNgay">Den Ngay</label>
+                <div class="input-group">
+                    <input id="field_denNgay" type="text" class="form-control" name="denNgay" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.denNgay" is-open="vm.datePickerOpenStatus.denNgay"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('denNgay')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.tuNgayH" for="field_tuNgayH">Tu Ngay Huong</label>
+                <div class="input-group">
+                    <input id="field_tuNgayH" type="text" class="form-control" name="tuNgayH" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.tuNgayH" is-open="vm.datePickerOpenStatus.tuNgayH"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('tuNgayH')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.denNgayH" for="field_denNgayH">Den Ngay Huong</label>
+                <div class="input-group">
+                    <input id="field_denNgayH" type="text" class="form-control" name="denNgayH" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.denNgayH" is-open="vm.datePickerOpenStatus.denNgayH"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('denNgayH')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soNgay" for="field_soNgay">So Ngay</label>
+            <input type="number" class="form-control" name="soNgay" id="field_soNgay"
+                    ng-model="vm.ctHuong.soNgay"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soNgayH" for="field_soNgayH">So Ngay Huong</label>
+            <input type="number" class="form-control" name="soNgayH" id="field_soNgayH"
+                    ng-model="vm.ctHuong.soNgayH"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soNgayLk" for="field_soNgayLk">So Ngay Luy Ke</label>
+            <input type="number" class="form-control" name="soNgayLk" id="field_soNgayLk"
+                    ng-model="vm.ctHuong.soNgayLk"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soTien" for="field_soTien">So Tien</label>
+            <input type="number" class="form-control" name="soTien" id="field_soTien"
+                    ng-model="vm.ctHuong.soTien"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soTienH" for="field_soTienH">So Tien Huong</label>
+            <input type="number" class="form-control" name="soTienH" id="field_soTienH"
+                    ng-model="vm.ctHuong.soTienH"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soNamBh" for="field_soNamBh">So Nam Bao Hiem</label>
+            <input type="number" class="form-control" name="soNamBh" id="field_soNamBh"
+                    ng-model="vm.ctHuong.soNamBh"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soThangBh" for="field_soThangBh">So Thang Bao Hiem</label>
+            <input type="number" class="form-control" name="soThangBh" id="field_soThangBh"
+                    ng-model="vm.ctHuong.soThangBh"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soNgayLkdv" for="field_soNgayLkdv">So Ngay Luy Ke Don Vi</label>
+            <input type="number" class="form-control" name="soNgayLkdv" id="field_soNgayLkdv"
+                    ng-model="vm.ctHuong.soNgayLkdv"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.ghiChu" for="field_ghiChu">Ghi Chu</label>
+            <input type="text" class="form-control" name="ghiChu" id="field_ghiChu"
+                    ng-model="vm.ctHuong.ghiChu"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dk1" for="field_dk1">Dieu Kien 1</label>
+            <input type="number" class="form-control" name="dk1" id="field_dk1"
+                    ng-model="vm.ctHuong.dk1"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dk2" for="field_dk2">Dieu Kien 2</label>
+            <input type="number" class="form-control" name="dk2" id="field_dk2"
+                    ng-model="vm.ctHuong.dk2"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dk5" for="field_dk5">Dieu Kien 5</label>
+            <input type="number" class="form-control" name="dk5" id="field_dk5"
+                    ng-model="vm.ctHuong.dk5"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dk6" for="field_dk6">Dieu Kien 6</label>
+            <input type="number" class="form-control" name="dk6" id="field_dk6"
+                    ng-model="vm.ctHuong.dk6"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.tuoiCon" for="field_tuoiCon">Tuoi Con</label>
+            <input type="number" class="form-control" name="tuoiCon" id="field_tuoiCon"
+                    ng-model="vm.ctHuong.tuoiCon"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.sttCon" for="field_sttCon">So Con</label>
+            <input type="number" class="form-control" name="sttCon" id="field_sttCon"
+                    ng-model="vm.ctHuong.sttCon"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.gioiTinh" for="field_gioiTinh">Gioi Tinh</label>
+            <input type="number" class="form-control" name="gioiTinh" id="field_gioiTinh"
+                    ng-model="vm.ctHuong.gioiTinh"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.maQt" for="field_maQt">Ma Quyet Toan</label>
+            <input type="text" class="form-control" name="maQt" id="field_maQt"
+                    ng-model="vm.ctHuong.maQt"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dkBenhDai" for="field_dkBenhDai">Dieu Kien Benh Dai Ngay</label>
+            <input type="number" class="form-control" name="dkBenhDai" id="field_dkBenhDai"
+                    ng-model="vm.ctHuong.dkBenhDai"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dkPhauthuat" for="field_dkPhauthuat">Dieu Kien Phau Thuat</label>
+            <input type="number" class="form-control" name="dkPhauthuat" id="field_dkPhauthuat"
+                    ng-model="vm.ctHuong.dkPhauthuat"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dkNghionha" for="field_dkNghionha">Dk Nghi o nha</label>
+            <input type="number" class="form-control" name="dkNghionha" id="field_dkNghionha"
+                    ng-model="vm.ctHuong.dkNghionha"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dkSuygiamld" for="field_dkSuygiamld">Dk Suygiamld</label>
+            <input type="number" class="form-control" name="dkSuygiamld" id="field_dkSuygiamld"
+                    ng-model="vm.ctHuong.dkSuygiamld"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dkXacsyt" for="field_dkXacsyt">Dk Xacsyt</label>
+            <input type="number" class="form-control" name="dkXacsyt" id="field_dkXacsyt"
+                    ng-model="vm.ctHuong.dkXacsyt"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dk3Ca" for="field_dk3Ca">Dk 3 Ca</label>
+            <input type="number" class="form-control" name="dk3Ca" id="field_dk3Ca"
+                    ng-model="vm.ctHuong.dk3Ca"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.ngay1" for="field_ngay1">Ngay 1</label>
+                <div class="input-group">
+                    <input id="field_ngay1" type="text" class="form-control" name="ngay1" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.ngay1" is-open="vm.datePickerOpenStatus.ngay1"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngay1')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.tenCon" for="field_tenCon">Ten Con</label>
+            <input type="text" class="form-control" name="tenCon" id="field_tenCon"
+                    ng-model="vm.ctHuong.tenCon"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.stt" for="field_stt">Stt</label>
+            <input type="number" class="form-control" name="stt" id="field_stt"
+                    ng-model="vm.ctHuong.stt"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.maQl" for="field_maQl">Ma Ql</label>
+            <input type="text" class="form-control" name="maQl" id="field_maQl"
+                    ng-model="vm.ctHuong.maQl"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.maTinh" for="field_maTinh">Ma Tinh</label>
+            <input type="text" class="form-control" name="maTinh" id="field_maTinh"
+                    ng-model="vm.ctHuong.maTinh"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.loaidc" for="field_loaidc">Loaidc</label>
+            <input type="number" class="form-control" name="loaidc" id="field_loaidc"
+                    ng-model="vm.ctHuong.loaidc"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.lydodc" for="field_lydodc">Lydodc</label>
+            <input type="text" class="form-control" name="lydodc" id="field_lydodc"
+                    ng-model="vm.ctHuong.lydodc"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.ghichudc" for="field_ghichudc">Ghichudc</label>
+            <input type="text" class="form-control" name="ghichudc" id="field_ghichudc"
+                    ng-model="vm.ctHuong.ghichudc"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.loaiBenh" for="field_loaiBenh">Loai Benh</label>
+            <input type="text" class="form-control" name="loaiBenh" id="field_loaiBenh"
+                    ng-model="vm.ctHuong.loaiBenh"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.tuyenBv" for="field_tuyenBv">Tuyen Bv</label>
+            <input type="text" class="form-control" name="tuyenBv" id="field_tuyenBv"
+                    ng-model="vm.ctHuong.tuyenBv"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.lbqhs" for="field_lbqhs">Lbqhs</label>
+            <input type="number" class="form-control" name="lbqhs" id="field_lbqhs"
+                    ng-model="vm.ctHuong.lbqhs"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.lbqml" for="field_lbqml">Lbqml</label>
+            <input type="number" class="form-control" name="lbqml" id="field_lbqml"
+                    ng-model="vm.ctHuong.lbqml"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.troCap" for="field_troCap">Tro Cap</label>
+            <input type="number" class="form-control" name="troCap" id="field_troCap"
+                    ng-model="vm.ctHuong.troCap"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.troCapBh" for="field_troCapBh">Tro Cap Bh</label>
+            <input type="number" class="form-control" name="troCapBh" id="field_troCapBh"
+                    ng-model="vm.ctHuong.troCapBh"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dk3" for="field_dk3">Dk 3</label>
+            <input type="number" class="form-control" name="dk3" id="field_dk3"
+                    ng-model="vm.ctHuong.dk3"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.dk4" for="field_dk4">Dk 4</label>
+            <input type="number" class="form-control" name="dk4" id="field_dk4"
+                    ng-model="vm.ctHuong.dk4"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.tyleh" for="field_tyleh">Tyleh</label>
+            <input type="number" class="form-control" name="tyleh" id="field_tyleh"
+                    ng-model="vm.ctHuong.tyleh"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.ngayNuoi" for="field_ngayNuoi">Ngay Nuoi</label>
+                <div class="input-group">
+                    <input id="field_ngayNuoi" type="text" class="form-control" name="ngayNuoi" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.ngayNuoi" is-open="vm.datePickerOpenStatus.ngayNuoi"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('ngayNuoi')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.soNgayCd" for="field_soNgayCd">So Ngay Cd</label>
+            <input type="number" class="form-control" name="soNgayCd" id="field_soNgayCd"
+                    ng-model="vm.ctHuong.soNgayCd"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.ngayNghiList" for="field_ngayNghiList">Ngay Nghi List</label>
+            <input type="text" class="form-control" name="ngayNghiList" id="field_ngayNghiList"
+                    ng-model="vm.ctHuong.ngayNghiList"
+                    />
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.vssid" for="field_vssid">Vssid</label>
+            <input type="text" class="form-control" name="vssid" id="field_vssid"
+                    ng-model="vm.ctHuong.vssid"
+                    />
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.tuNgayBs" for="field_tuNgayBs">Tu Ngay Bs</label>
+                <div class="input-group">
+                    <input id="field_tuNgayBs" type="text" class="form-control" name="tuNgayBs" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.tuNgayBs" is-open="vm.datePickerOpenStatus.tuNgayBs"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('tuNgayBs')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group col-xs-6">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.denNgayBs" for="field_denNgayBs">Den Ngay Bs</label>
+                <div class="input-group">
+                    <input id="field_denNgayBs" type="text" class="form-control" name="denNgayBs" datetime-picker="{{dateformat}}" ng-model="vm.ctHuong.denNgayBs" is-open="vm.datePickerOpenStatus.denNgayBs"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('denNgayBs')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        </div>
+        
+        <div class='row'>
+        <div class="form-group col-xs-4">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.chk1" for="field_chk1">Chk 1</label>
+            <input type="number" class="form-control" name="chk1" id="field_chk1"
+                    ng-model="vm.ctHuong.chk1"
+                    />
+        </div>
+        <div class="form-group col-xs-4">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.chk2" for="field_chk2">Chk 2</label>
+            <input type="number" class="form-control" name="chk2" id="field_chk2"
+                    ng-model="vm.ctHuong.chk2"
+                    />
+        </div>
+        <div class="form-group col-xs-4">
+            <label class="control-label" data-translate="appsmysqlApp.ctHuong.chk3" for="field_chk3">Chk 3</label>
+            <input type="number" class="form-control" name="chk3" id="field_chk3"
+                    ng-model="vm.ctHuong.chk3"
+                    />
+        </div>
+		</div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

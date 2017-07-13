@@ -1,0 +1,129 @@
+<div>
+    <h2 data-translate="appsmysqlApp.dotXh.home.title">Dot Xhs</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="dot-xh.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="appsmysqlApp.dotXh.home.createLabel">
+                        Create new Dot Xh
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'appsmysqlApp.dotXh.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maDv"><span data-translate="appsmysqlApp.dotXh.maDv">Ma Dv</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maQt"><span data-translate="appsmysqlApp.dotXh.maQt">Ma Qt</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="loaiDt"><span data-translate="appsmysqlApp.dotXh.loaiDt">Loai Dt</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maNt"><span data-translate="appsmysqlApp.dotXh.maNt">Ma Nt</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tyGia"><span data-translate="appsmysqlApp.dotXh.tyGia">Ty Gia</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ngayCt"><span data-translate="appsmysqlApp.dotXh.ngayCt">Ngay Ct</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="soPhieu"><span data-translate="appsmysqlApp.dotXh.soPhieu">So Phieu</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="soLd"><span data-translate="appsmysqlApp.dotXh.soLd">So Ld</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tql"><span data-translate="appsmysqlApp.dotXh.tql">Tql</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="userCode"><span data-translate="appsmysqlApp.dotXh.userCode">User Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastCode"><span data-translate="appsmysqlApp.dotXh.lastCode">Last Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="sldNu"><span data-translate="appsmysqlApp.dotXh.sldNu">Sld Nu</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maQl"><span data-translate="appsmysqlApp.dotXh.maQl">Ma Ql</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maTinh"><span data-translate="appsmysqlApp.dotXh.maTinh">Ma Tinh</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="listNgaynghi"><span data-translate="appsmysqlApp.dotXh.listNgaynghi">List Ngaynghi</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="khoaSo"><span data-translate="appsmysqlApp.dotXh.khoaSo">Khoa So</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ngayKhoa"><span data-translate="appsmysqlApp.dotXh.ngayKhoa">Ngay Khoa</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="thongTin1"><span data-translate="appsmysqlApp.dotXh.thongTin1">Thong Tin 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="thongTin2"><span data-translate="appsmysqlApp.dotXh.thongTin2">Thong Tin 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="thongTin3"><span data-translate="appsmysqlApp.dotXh.thongTin3">Thong Tin 3</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ngay1"><span data-translate="appsmysqlApp.dotXh.ngay1">Ngay 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ngay2"><span data-translate="appsmysqlApp.dotXh.ngay2">Ngay 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ngay3"><span data-translate="appsmysqlApp.dotXh.ngay3">Ngay 3</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ghiChu"><span data-translate="appsmysqlApp.dotXh.ghiChu">Ghi Chu</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ngayDuyet"><span data-translate="appsmysqlApp.dotXh.ngayDuyet">Ngay Duyet</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nguoiDuyet"><span data-translate="appsmysqlApp.dotXh.nguoiDuyet">Nguoi Duyet</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="keySl"><span data-translate="appsmysqlApp.dotXh.keySl">Key Sl</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dotXh in vm.dotXhs track by dotXh.id">
+                    <td><a ui-sref="dot-xh-detail({id:dotXh.id})">{{dotXh.id}}</a></td>
+                    <td>{{dotXh.maDv}}</td>
+                    <td>{{dotXh.maQt}}</td>
+                    <td>{{dotXh.loaiDt}}</td>
+                    <td>{{dotXh.maNt}}</td>
+                    <td>{{dotXh.tyGia}}</td>
+                    <td>{{dotXh.ngayCt | date:'medium'}}</td>
+                    <td>{{dotXh.soPhieu}}</td>
+                    <td>{{dotXh.soLd}}</td>
+                    <td>{{dotXh.tql}}</td>
+                    <td>{{dotXh.userCode}}</td>
+                    <td>{{dotXh.lastCode | date:'medium'}}</td>
+                    <td>{{dotXh.sldNu}}</td>
+                    <td>{{dotXh.maQl}}</td>
+                    <td>{{dotXh.maTinh}}</td>
+                    <td>{{dotXh.listNgaynghi}}</td>
+                    <td>{{dotXh.khoaSo}}</td>
+                    <td>{{dotXh.ngayKhoa | date:'medium'}}</td>
+                    <td>{{dotXh.thongTin1}}</td>
+                    <td>{{dotXh.thongTin2}}</td>
+                    <td>{{dotXh.thongTin3}}</td>
+                    <td>{{dotXh.ngay1 | date:'medium'}}</td>
+                    <td>{{dotXh.ngay2 | date:'medium'}}</td>
+                    <td>{{dotXh.ngay3 | date:'medium'}}</td>
+                    <td>{{dotXh.ghiChu}}</td>
+                    <td>{{dotXh.ngayDuyet | date:'medium'}}</td>
+                    <td>{{dotXh.nguoiDuyet}}</td>
+                    <td>{{dotXh.keySl}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="dot-xh-detail({id:dotXh.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="dot-xh.edit({id:dotXh.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="dot-xh.delete({id:dotXh.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

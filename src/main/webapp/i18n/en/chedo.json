@@ -1,0 +1,23 @@
+{
+    "appsmysqlApp": {
+        "chedo" : {
+            "home": {
+                "title": "Chedos",
+                "createLabel": "Create a new Chedo",
+                "createOrEditLabel": "Create or edit a Chedo",
+                "search": "Search for Chedo"
+            },
+            "created": "A new Chedo is created with identifier {{ param }}",
+            "updated": "A Chedo is updated with identifier {{ param }}",
+            "deleted": "A Chedo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Chedo {{ id }}?"
+            },
+            "detail": {
+                "title": "Chedo"
+            },
+            "maCD": "Ma CD",
+            "tenCD": "Ten CD"
+        }
+    }
+}

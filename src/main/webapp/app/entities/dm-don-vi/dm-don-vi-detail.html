@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="appsmysqlApp.dmDonVi.detail.title">Dm Don Vi</span> {{vm.dmDonVi.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appsmysqlApp.dmDonVi.ma">Ma</span></dt>
+        <dd>
+            <span>{{vm.dmDonVi.ma}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.dmDonVi.name">Name</span></dt>
+        <dd>
+            <span>{{vm.dmDonVi.name}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.dmDonVi.diaChi">Dia Chi</span></dt>
+        <dd>
+            <span>{{vm.dmDonVi.diaChi}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.dmDonVi.ghiChu">Ghi Chu</span></dt>
+        <dd>
+            <span>{{vm.dmDonVi.ghiChu}}</span>
+        </dd>
+        <dt><span data-translate="appsmysqlApp.dmDonVi.ghiChu">Ghi Chu</span></dt>
+        <dd>
+            <span>{{vm.dmDonVi.ghiChu}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="dm-don-vi-detail.edit({id:vm.dmDonVi.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
