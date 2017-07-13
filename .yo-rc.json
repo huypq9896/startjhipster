@@ -21,7 +21,7 @@
     "serviceDiscoveryType": false,
     "buildTool": "maven",
     "enableSocialSignIn": false,
-    "jwtSecretKey": "14a2ac968eb8f34dd52a23162bbb994f77a27dca",
+    "jwtSecretKey": "c724e9356d5ec2759c5b2da2ff2ba71974917210",
     "clientFramework": "angular1",
     "useSass": false,
     "clientPackageManager": "yarn",

@@ -23,7 +23,7 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://localhost:3306/appsmysql?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
-        password:
+        password: huy12345
         hikari:
             data-source-properties:
                 cachePrepStmts: true
@@ -97,7 +97,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 14a2ac968eb8f34dd52a23162bbb994f77a27dca
+                secret: c724e9356d5ec2759c5b2da2ff2ba71974917210
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
